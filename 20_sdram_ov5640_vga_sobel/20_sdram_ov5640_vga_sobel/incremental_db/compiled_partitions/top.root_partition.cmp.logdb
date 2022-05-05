@@ -1,0 +1,5 @@
+v1
+PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,mark:mark_scale|lpm_mult:Mult0|mult_aft:auto_generated|mac_mult3,
+PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,mark:mark_scale|lpm_mult:Mult0|mult_aft:auto_generated|mac_mult1,
+PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,mark_2:mark_rightside|lpm_mult:Mult0|mult_dft:auto_generated|mac_mult3,
+PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,mark_2:mark_rightside|lpm_mult:Mult0|mult_dft:auto_generated|mac_mult1,

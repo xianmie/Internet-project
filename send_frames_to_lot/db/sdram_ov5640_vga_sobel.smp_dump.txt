@@ -1,0 +1,113 @@
+
+State Machine - |top|uart_iot_top1:comb_357|uart_tx:m4|state
+Name state.S_SEND_BYTE state.S_START state.S_IDLE state.S_STOP 
+state.S_IDLE 0 0 0 0 
+state.S_START 0 1 1 0 
+state.S_SEND_BYTE 1 0 1 0 
+state.S_STOP 0 0 1 1 
+
+State Machine - |top|uart_iot_top1:comb_357|at_tx:m3|state
+Name state.SEND_ENDING3 state.SEND_dATA3 state.SEND_FRONT3 state.SEND_ENDING2 state.SEND_dATA2 state.SEND_FRONT2 state.SEND_ENDING1 state.SEND_dATA1 state.SEND_FRONT1 state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 0 0 0 
+state.SEND_FRONT1 0 0 0 0 0 0 0 0 1 1 
+state.SEND_dATA1 0 0 0 0 0 0 0 1 0 1 
+state.SEND_ENDING1 0 0 0 0 0 0 1 0 0 1 
+state.SEND_FRONT2 0 0 0 0 0 1 0 0 0 1 
+state.SEND_dATA2 0 0 0 0 1 0 0 0 0 1 
+state.SEND_ENDING2 0 0 0 1 0 0 0 0 0 1 
+state.SEND_FRONT3 0 0 1 0 0 0 0 0 0 1 
+state.SEND_dATA3 0 1 0 0 0 0 0 0 0 1 
+state.SEND_ENDING3 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |top|uart_iot_top1:comb_357|transform:m2|state
+Name state.WAIT state.IDLE state.WORK 
+state.IDLE 0 0 0 
+state.WORK 0 1 1 
+state.WAIT 1 1 0 
+
+State Machine - |top|frame_read_sdram_lot:frame_read_sdram_lot_m0|state
+Name state.WAIT_UARTEND state.MEM_READ2 state.MEM_READ1 state.IDLE 
+state.IDLE 0 0 0 0 
+state.MEM_READ1 0 0 1 1 
+state.MEM_READ2 0 1 0 1 
+state.WAIT_UARTEND 1 0 0 1 
+
+State Machine - |top|sdram_core:sdram_core_m0|state
+Name state.S_TRFC state.S_AR state.S_TRP state.S_PRE state.S_TWR state.S_WD state.S_WRITE state.S_RD state.S_CL state.S_READ state.S_TRCD state.S_ACTIVE state.S_IDLE state.S_INIT_DONE state.S_INIT_TMRD state.S_INIT_MRS state.S_INIT_TRF2 state.S_INIT_AR2 state.S_INIT_TRF1 state.S_INIT_AR1 state.S_INIT_TRP state.S_INIT_PRE state.S_INIT_NOP 
+state.S_INIT_NOP 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.S_INIT_PRE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.S_INIT_TRP 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.S_INIT_AR1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.S_INIT_TRF1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.S_INIT_AR2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.S_INIT_TRF2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.S_INIT_MRS 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.S_INIT_TMRD 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.S_INIT_DONE 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.S_IDLE 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.S_ACTIVE 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.S_TRCD 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.S_READ 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.S_CL 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.S_RD 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.S_WRITE 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.S_WD 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.S_TWR 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.S_PRE 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.S_TRP 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.S_AR 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.S_TRFC 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |top|frame_read_write:frame_read_write_m0|frame_fifo_read:frame_fifo_read_m0|state
+Name state.S_END state.S_READ_BURST_END state.S_READ_BURST state.S_CHECK_FIFO state.S_ACK state.S_IDLE 
+state.S_IDLE 0 0 0 0 0 0 
+state.S_ACK 0 0 0 0 1 1 
+state.S_CHECK_FIFO 0 0 0 1 0 1 
+state.S_READ_BURST 0 0 1 0 0 1 
+state.S_READ_BURST_END 0 1 0 0 0 1 
+state.S_END 1 0 0 0 0 1 
+
+State Machine - |top|frame_read_write:frame_read_write_m0|frame_fifo_write:frame_fifo_write_m0|state
+Name state.S_END state.S_WRITE_BURST_END state.S_WRITE_BURST state.S_CHECK_FIFO state.S_ACK state.S_IDLE 
+state.S_IDLE 0 0 0 0 0 0 
+state.S_ACK 0 0 0 0 1 1 
+state.S_CHECK_FIFO 0 0 0 1 0 1 
+state.S_WRITE_BURST 0 0 1 0 0 1 
+state.S_WRITE_BURST_END 0 1 0 0 0 1 
+state.S_END 1 0 0 0 0 1 
+
+State Machine - |top|i2c_dri:u_i2c_dr_m3|cur_state
+Name cur_state.st_stop cur_state.st_data_rd cur_state.st_addr_rd cur_state.st_data_wr_8 cur_state.st_data_wr_16 cur_state.st_addr8 cur_state.st_addr16 cur_state.st_sladdr cur_state.st_idle 
+cur_state.st_idle 0 0 0 0 0 0 0 0 0 
+cur_state.st_sladdr 0 0 0 0 0 0 0 1 1 
+cur_state.st_addr16 0 0 0 0 0 0 1 0 1 
+cur_state.st_addr8 0 0 0 0 0 1 0 0 1 
+cur_state.st_data_wr_16 0 0 0 0 1 0 0 0 1 
+cur_state.st_data_wr_8 0 0 0 1 0 0 0 0 1 
+cur_state.st_addr_rd 0 0 1 0 0 0 0 0 1 
+cur_state.st_data_rd 0 1 0 0 0 0 0 0 1 
+cur_state.st_stop 1 0 0 0 0 0 0 0 1 
+
+State Machine - |top|i2c_dri:u_i2c_dr_m2|cur_state
+Name cur_state.st_stop cur_state.st_data_rd cur_state.st_addr_rd cur_state.st_data_wr_8 cur_state.st_data_wr_16 cur_state.st_addr8 cur_state.st_addr16 cur_state.st_sladdr cur_state.st_idle 
+cur_state.st_idle 0 0 0 0 0 0 0 0 0 
+cur_state.st_sladdr 0 0 0 0 0 0 0 1 1 
+cur_state.st_addr16 0 0 0 0 0 0 1 0 1 
+cur_state.st_addr8 0 0 0 0 0 1 0 0 1 
+cur_state.st_data_wr_16 0 0 0 0 1 0 0 0 1 
+cur_state.st_data_wr_8 0 0 0 1 0 0 0 0 1 
+cur_state.st_addr_rd 0 0 1 0 0 0 0 0 1 
+cur_state.st_data_rd 0 1 0 0 0 0 0 0 1 
+cur_state.st_stop 1 0 0 0 0 0 0 0 1 
+
+State Machine - |top|i2c_dri:u_i2c_dr_m1|cur_state
+Name cur_state.st_stop cur_state.st_data_rd cur_state.st_addr_rd cur_state.st_data_wr_8 cur_state.st_data_wr_16 cur_state.st_addr8 cur_state.st_addr16 cur_state.st_sladdr cur_state.st_idle 
+cur_state.st_idle 0 0 0 0 0 0 0 0 0 
+cur_state.st_sladdr 0 0 0 0 0 0 0 1 1 
+cur_state.st_addr16 0 0 0 0 0 0 1 0 1 
+cur_state.st_addr8 0 0 0 0 0 1 0 0 1 
+cur_state.st_data_wr_16 0 0 0 0 1 0 0 0 1 
+cur_state.st_data_wr_8 0 0 0 1 0 0 0 0 1 
+cur_state.st_addr_rd 0 0 1 0 0 0 0 0 1 
+cur_state.st_data_rd 0 1 0 0 0 0 0 0 1 
+cur_state.st_stop 1 0 0 0 0 0 0 0 1 

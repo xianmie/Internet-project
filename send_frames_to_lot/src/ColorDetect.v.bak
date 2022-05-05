@@ -1,0 +1,19 @@
+module ColorDetect (
+	input			clk,
+	input			rst,
+	input			hsv_hs,
+	input			hsv_vs,
+	input			hsv_de,
+	input[23:0] hsv,
+	output reg	color_hs,
+	output reg	color_vs,
+	output reg	color_de,
+	output reg	color
+);
+wire[7:0]	hue,saturation,value;
+assign hue			=	hsv[23:16];//ignored
+assign saturation	=	hsv[15:8];
+assign value		=	hsv[7:0];
+
+
+endmodule

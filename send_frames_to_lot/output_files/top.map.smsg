@@ -1,0 +1,5 @@
+Warning (10268): Verilog HDL information at transform_base64.v(11): always construct contains both blocking and non-blocking assignments File: C:/Internet+/send frames to lot/src/uart_iot/transform_base64.v Line: 11
+Info (10281): Verilog HDL Declaration information at buzzer_pwm_test.v(6): object "buzzer" differs only in case from object "BUZZER" in the same scope File: C:/Internet+/send frames to lot/src/scale/buzzer/buzzer_pwm_test.v Line: 6
+Warning (10268): Verilog HDL information at top.v(265): always construct contains both blocking and non-blocking assignments File: C:/Internet+/send frames to lot/src/top.v Line: 265
+Info (10281): Verilog HDL Declaration information at color_bar.v(45): object "H_ACTIVE" differs only in case from object "h_active" in the same scope File: C:/Internet+/send frames to lot/src/color_bar.v Line: 45
+Info (10281): Verilog HDL Declaration information at color_bar.v(49): object "V_ACTIVE" differs only in case from object "v_active" in the same scope File: C:/Internet+/send frames to lot/src/color_bar.v Line: 49

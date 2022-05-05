@@ -1,0 +1,15 @@
+module sr04 (
+	input			clk,
+	input			rst,
+	input			echo,
+	output		trig,
+	output[9:0]	dis
+);
+
+clk_div clk_div_m0(
+	.clk_50M			(clk),
+	.rst				(rst),
+	.clk_div			(clk_div)
+);
+
+endmodule

@@ -1,0 +1,754 @@
+Partition Merge report for top
+Wed Oct 14 21:07:53 2020
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Partition Merge Summary
+  3. Partition Merge Netlist Types Used
+  4. Connections to In-System Debugging Instance "auto_signaltap_0"
+  5. Partition Merge Partition Statistics
+  6. Partition Merge Partition Pin Processing
+  7. Partition Merge Resource Usage Summary
+  8. Partition Merge RAM Summary
+  9. Partition Merge Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Partition Merge Summary                                                          ;
++------------------------------------+---------------------------------------------+
+; Partition Merge Status             ; Successful - Wed Oct 14 21:07:53 2020       ;
+; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                      ; top                                         ;
+; Top-level Entity Name              ; top                                         ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 3,965                                       ;
+;     Total combinational functions  ; 2,786                                       ;
+;     Dedicated logic registers      ; 2,329                                       ;
+; Total registers                    ; 2329                                        ;
+; Total pins                         ; 106                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 64,968                                      ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 2                                           ;
++------------------------------------+---------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge Netlist Types Used                                                                                            ;
++--------------------------------+----------------+-------------------+------------------------+--------------------------------+
+; Partition Name                 ; Partition Type ; Netlist Type Used ; Netlist Type Requested ; Partition Contents             ;
++--------------------------------+----------------+-------------------+------------------------+--------------------------------+
+; Top                            ; User-created   ; Source File       ; Source File            ;                                ;
+; sld_hub:auto_hub               ; Auto-generated ; Post-Synthesis    ; Post-Synthesis         ; sld_hub:auto_hub               ;
+; sld_signaltap:auto_signaltap_0 ; Auto-generated ; Post-Synthesis    ; Post-Synthesis         ; sld_signaltap:auto_signaltap_0 ;
+; hard_block:auto_generated_inst ; Auto-generated ; Source File       ; Source File            ; hard_block:auto_generated_inst ;
++--------------------------------+----------------+-------------------+------------------------+--------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Connections to In-System Debugging Instance "auto_signaltap_0"                                                                                                                        ;
++------------------------------------------------+---------------+-----------+--------------------------------+-------------------+-------------------------------------------+---------+
+; Name                                           ; Type          ; Status    ; Partition Name                 ; Netlist Type Used ; Actual Connection                         ; Details ;
++------------------------------------------------+---------------+-----------+--------------------------------+-------------------+-------------------------------------------+---------+
+; ax_debounce:ax_debounce_m0|button_posedge~reg0 ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ax_debounce:ax_debounce_m0|button_posedge ; N/A     ;
+; ax_debounce:ax_debounce_m0|button_posedge~reg0 ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ax_debounce:ax_debounce_m0|button_posedge ; N/A     ;
+; auto_signaltap_0|gnd                           ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND       ; N/A     ;
+; auto_signaltap_0|gnd                           ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND       ; N/A     ;
+; auto_signaltap_0|gnd                           ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND       ; N/A     ;
+; auto_signaltap_0|gnd                           ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND       ; N/A     ;
+; auto_signaltap_0|gnd                           ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND       ; N/A     ;
+; auto_signaltap_0|gnd                           ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND       ; N/A     ;
+; auto_signaltap_0|gnd                           ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND       ; N/A     ;
+; auto_signaltap_0|gnd                           ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND       ; N/A     ;
+; auto_signaltap_0|gnd                           ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND       ; N/A     ;
+; auto_signaltap_0|gnd                           ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND       ; N/A     ;
+; auto_signaltap_0|gnd                           ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND       ; N/A     ;
+; auto_signaltap_0|gnd                           ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND       ; N/A     ;
+; auto_signaltap_0|gnd                           ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND       ; N/A     ;
+; auto_signaltap_0|gnd                           ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND       ; N/A     ;
+; auto_signaltap_0|gnd                           ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND       ; N/A     ;
+; auto_signaltap_0|gnd                           ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND       ; N/A     ;
+; auto_signaltap_0|gnd                           ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND       ; N/A     ;
+; auto_signaltap_0|vcc                           ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC       ; N/A     ;
+; auto_signaltap_0|vcc                           ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC       ; N/A     ;
+; auto_signaltap_0|vcc                           ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC       ; N/A     ;
+; auto_signaltap_0|vcc                           ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC       ; N/A     ;
+; auto_signaltap_0|vcc                           ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC       ; N/A     ;
+; auto_signaltap_0|vcc                           ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC       ; N/A     ;
+; auto_signaltap_0|vcc                           ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC       ; N/A     ;
+; auto_signaltap_0|vcc                           ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC       ; N/A     ;
+; auto_signaltap_0|vcc                           ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC       ; N/A     ;
+; auto_signaltap_0|vcc                           ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC       ; N/A     ;
+; auto_signaltap_0|vcc                           ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC       ; N/A     ;
+; auto_signaltap_0|vcc                           ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC       ; N/A     ;
+; auto_signaltap_0|vcc                           ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC       ; N/A     ;
+; auto_signaltap_0|vcc                           ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC       ; N/A     ;
+; auto_signaltap_0|vcc                           ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC       ; N/A     ;
+; ax_debounce:ax_debounce_m0|button_posedge      ; post-fitting  ; connected ; Top                            ; post-synthesis    ; ax_debounce:ax_debounce_m0|button_posedge ; N/A     ;
+; ax_debounce:ax_debounce_m0|button_posedge      ; post-fitting  ; connected ; Top                            ; post-synthesis    ; ax_debounce:ax_debounce_m0|button_posedge ; N/A     ;
+; clk                                            ; post-fitting  ; connected ; Top                            ; post-synthesis    ; clk                                       ; N/A     ;
+; switch                                         ; post-fitting  ; connected ; Top                            ; post-synthesis    ; switch                                    ; N/A     ;
+; switch                                         ; post-fitting  ; connected ; Top                            ; post-synthesis    ; switch                                    ; N/A     ;
+; switch~input                                   ; post-fitting  ; connected ; Top                            ; post-synthesis    ; switch                                    ; N/A     ;
+; switch~input                                   ; post-fitting  ; connected ; Top                            ; post-synthesis    ; switch                                    ; N/A     ;
++------------------------------------------------+---------------+-----------+--------------------------------+-------------------+-------------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge Partition Statistics                                                                                                     ;
++---------------------------------------------+-------+------------------+--------------------------------+--------------------------------+
+; Statistic                                   ; Top   ; sld_hub:auto_hub ; sld_signaltap:auto_signaltap_0 ; hard_block:auto_generated_inst ;
++---------------------------------------------+-------+------------------+--------------------------------+--------------------------------+
+; Estimated Total logic elements              ; 3384  ; 154              ; 427                            ; 0                              ;
+;                                             ;       ;                  ;                                ;                                ;
+; Total combinational functions               ; 2361  ; 127              ; 298                            ; 0                              ;
+; Logic element usage by number of LUT inputs ;       ;                  ;                                ;                                ;
+;     -- 4 input functions                    ; 618   ; 53               ; 123                            ; 0                              ;
+;     -- 3 input functions                    ; 1177  ; 37               ; 85                             ; 0                              ;
+;     -- <=2 input functions                  ; 566   ; 37               ; 90                             ; 0                              ;
+;                                             ;       ;                  ;                                ;                                ;
+; Logic elements by mode                      ;       ;                  ;                                ;                                ;
+;     -- normal mode                          ; 1349  ; 119              ; 236                            ; 0                              ;
+;     -- arithmetic mode                      ; 1012  ; 8                ; 62                             ; 0                              ;
+;                                             ;       ;                  ;                                ;                                ;
+; Total registers                             ; 1921  ; 91               ; 317                            ; 0                              ;
+;     -- Dedicated logic registers            ; 1921  ; 91               ; 317                            ; 0                              ;
+;     -- I/O registers                        ; 0     ; 0                ; 0                              ; 0                              ;
+;                                             ;       ;                  ;                                ;                                ;
+; Virtual pins                                ; 0     ; 0                ; 0                              ; 0                              ;
+; I/O pins                                    ; 106   ; 0                ; 0                              ; 0                              ;
+; Embedded Multiplier 9-bit elements          ; 0     ; 0                ; 0                              ; 0                              ;
+; Total memory bits                           ; 64456 ; 0                ; 512                            ; 0                              ;
+; Total RAM block bits                        ; 0     ; 0                ; 0                              ; 0                              ;
+; JTAG                                        ; 1     ; 0                ; 0                              ; 0                              ;
+; PLL                                         ; 0     ; 0                ; 0                              ; 2                              ;
+;                                             ;       ;                  ;                                ;                                ;
+; Connections                                 ;       ;                  ;                                ;                                ;
+;     -- Input Connections                    ; 1860  ; 134              ; 511                            ; 2                              ;
+;     -- Registered Input Connections         ; 1758  ; 102              ; 349                            ; 0                              ;
+;     -- Output Connections                   ; 485   ; 151              ; 34                             ; 1837                           ;
+;     -- Registered Output Connections        ; 4     ; 151              ; 0                              ; 0                              ;
+;                                             ;       ;                  ;                                ;                                ;
+; Internal Connections                        ;       ;                  ;                                ;                                ;
+;     -- Total Connections                    ; 16179 ; 841              ; 2084                           ; 1841                           ;
+;     -- Registered Connections               ; 9346  ; 611              ; 1110                           ; 0                              ;
+;                                             ;       ;                  ;                                ;                                ;
+; External Connections                        ;       ;                  ;                                ;                                ;
+;     -- Top                                  ; 44    ; 123              ; 339                            ; 1839                           ;
+;     -- sld_hub:auto_hub                     ; 123   ; 20               ; 142                            ; 0                              ;
+;     -- sld_signaltap:auto_signaltap_0       ; 339   ; 142              ; 64                             ; 0                              ;
+;     -- hard_block:auto_generated_inst       ; 1839  ; 0                ; 0                              ; 0                              ;
+;                                             ;       ;                  ;                                ;                                ;
+; Partition Interface                         ;       ;                  ;                                ;                                ;
+;     -- Input Ports                          ; 40    ; 45               ; 81                             ; 2                              ;
+;     -- Output Ports                         ; 49    ; 62               ; 23                             ; 3                              ;
+;     -- Bidir Ports                          ; 22    ; 0                ; 0                              ; 0                              ;
+;                                             ;       ;                  ;                                ;                                ;
+; Registered Ports                            ;       ;                  ;                                ;                                ;
+;     -- Registered Input Ports               ; 0     ; 4                ; 14                             ; 0                              ;
+;     -- Registered Output Ports              ; 0     ; 29               ; 9                              ; 0                              ;
+;                                             ;       ;                  ;                                ;                                ;
+; Port Connectivity                           ;       ;                  ;                                ;                                ;
+;     -- Input Ports driven by GND            ; 0     ; 0                ; 17                             ; 0                              ;
+;     -- Output Ports driven by GND           ; 0     ; 28               ; 2                              ; 0                              ;
+;     -- Input Ports driven by VCC            ; 0     ; 0                ; 15                             ; 0                              ;
+;     -- Output Ports driven by VCC           ; 0     ; 0                ; 1                              ; 0                              ;
+;     -- Input Ports with no Source           ; 0     ; 25               ; 8                              ; 0                              ;
+;     -- Output Ports with no Source          ; 0     ; 0                ; 0                              ; 0                              ;
+;     -- Input Ports with no Fanout           ; 0     ; 30               ; 22                             ; 1                              ;
+;     -- Output Ports with no Fanout          ; 0     ; 29               ; 11                             ; 0                              ;
++---------------------------------------------+-------+------------------+--------------------------------+--------------------------------+
+Note: Resource usage numbers presented for Partitions containing post-synthesis logic are estimates.  For Partitions containing post-fit logic, resource usage numbers are accurate based on previous placement information.  Actual Fitter results may vary depending on current Fitter Preservation Level assignments.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge Partition Pin Processing                                                                                          ;
++-----------------------------------------------+-----------+---------------+----------+--------------------------------------------+
+; Name                                          ; Partition ; Type          ; Location ; Status                                     ;
++-----------------------------------------------+-----------+---------------+----------+--------------------------------------------+
+; altera_reserved_tck                           ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- altera_reserved_tck                    ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- altera_reserved_tck~input              ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; altera_reserved_tdi                           ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- altera_reserved_tdi                    ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- altera_reserved_tdi~input              ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; altera_reserved_tdo                           ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- altera_reserved_tdo                    ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- altera_reserved_tdo~output             ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; altera_reserved_tms                           ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- altera_reserved_tms                    ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- altera_reserved_tms~input              ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; clk                                           ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- clk                                    ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- clk~input                              ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_db_1[0]                                  ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- cmos_db_1[0]                           ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- cmos_db_1[0]~input                     ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_db_1[1]                                  ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- cmos_db_1[1]                           ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- cmos_db_1[1]~input                     ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_db_1[2]                                  ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- cmos_db_1[2]                           ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- cmos_db_1[2]~input                     ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_db_1[3]                                  ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- cmos_db_1[3]                           ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- cmos_db_1[3]~input                     ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_db_1[4]                                  ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- cmos_db_1[4]                           ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- cmos_db_1[4]~input                     ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_db_1[5]                                  ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- cmos_db_1[5]                           ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- cmos_db_1[5]~input                     ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_db_1[6]                                  ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- cmos_db_1[6]                           ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- cmos_db_1[6]~input                     ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_db_1[7]                                  ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- cmos_db_1[7]                           ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- cmos_db_1[7]~input                     ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_db_2[0]                                  ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- cmos_db_2[0]                           ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- cmos_db_2[0]~input                     ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_db_2[1]                                  ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- cmos_db_2[1]                           ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- cmos_db_2[1]~input                     ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_db_2[2]                                  ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- cmos_db_2[2]                           ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- cmos_db_2[2]~input                     ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_db_2[3]                                  ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- cmos_db_2[3]                           ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- cmos_db_2[3]~input                     ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_db_2[4]                                  ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- cmos_db_2[4]                           ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- cmos_db_2[4]~input                     ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_db_2[5]                                  ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- cmos_db_2[5]                           ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- cmos_db_2[5]~input                     ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_db_2[6]                                  ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- cmos_db_2[6]                           ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- cmos_db_2[6]~input                     ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_db_2[7]                                  ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- cmos_db_2[7]                           ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- cmos_db_2[7]~input                     ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_db_3[0]                                  ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- cmos_db_3[0]                           ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- cmos_db_3[0]~input                     ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_db_3[1]                                  ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- cmos_db_3[1]                           ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- cmos_db_3[1]~input                     ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_db_3[2]                                  ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- cmos_db_3[2]                           ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- cmos_db_3[2]~input                     ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_db_3[3]                                  ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- cmos_db_3[3]                           ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- cmos_db_3[3]~input                     ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_db_3[4]                                  ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- cmos_db_3[4]                           ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- cmos_db_3[4]~input                     ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_db_3[5]                                  ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- cmos_db_3[5]                           ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- cmos_db_3[5]~input                     ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_db_3[6]                                  ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- cmos_db_3[6]                           ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- cmos_db_3[6]~input                     ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_db_3[7]                                  ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- cmos_db_3[7]                           ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- cmos_db_3[7]~input                     ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_href_1                                   ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- cmos_href_1                            ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- cmos_href_1~input                      ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_href_2                                   ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- cmos_href_2                            ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- cmos_href_2~input                      ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_href_3                                   ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- cmos_href_3                            ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- cmos_href_3~input                      ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_pclk                                     ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- cmos_pclk                              ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- cmos_pclk~input                        ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_pwdn_1                                   ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- cmos_pwdn_1                            ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- cmos_pwdn_1~output                     ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_pwdn_2                                   ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- cmos_pwdn_2                            ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- cmos_pwdn_2~output                     ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_pwdn_3                                   ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- cmos_pwdn_3                            ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- cmos_pwdn_3~output                     ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_rst_n_1                                  ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- cmos_rst_n_1                           ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- cmos_rst_n_1~input                     ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_rst_n_2                                  ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- cmos_rst_n_2                           ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- cmos_rst_n_2~input                     ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_rst_n_3                                  ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- cmos_rst_n_3                           ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- cmos_rst_n_3~input                     ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_scl_1                                    ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- cmos_scl_1                             ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- cmos_scl_1~output                      ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_scl_2                                    ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- cmos_scl_2                             ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- cmos_scl_2~output                      ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_scl_3                                    ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- cmos_scl_3                             ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- cmos_scl_3~output                      ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_sda_1                                    ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- cmos_sda_1                             ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- cmos_sda_1~output                      ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_sda_2                                    ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- cmos_sda_2                             ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- cmos_sda_2~output                      ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_sda_3                                    ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- cmos_sda_3                             ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- cmos_sda_3~output                      ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_vsync_1                                  ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- cmos_vsync_1                           ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- cmos_vsync_1~input                     ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_vsync_2                                  ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- cmos_vsync_2                           ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- cmos_vsync_2~input                     ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_vsync_3                                  ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- cmos_vsync_3                           ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- cmos_vsync_3~input                     ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_xclk_1                                   ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- cmos_xclk_1                            ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- cmos_xclk_1~output                     ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_xclk_2                                   ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- cmos_xclk_2                            ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- cmos_xclk_2~output                     ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; cmos_xclk_3                                   ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- cmos_xclk_3                            ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- cmos_xclk_3~output                     ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; pre_syn.bp.ax_debounce_m0_button_posedge~reg0 ; Top       ; Output Port   ; n/a      ;                                            ;
+;                                               ;           ;               ;          ;                                            ;
+; rst_n                                         ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- rst_n                                  ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- rst_n~input                            ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; sdram_addr[0]                                 ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sdram_addr[0]                          ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sdram_addr[0]~output                   ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; sdram_addr[10]                                ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sdram_addr[10]                         ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sdram_addr[10]~output                  ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; sdram_addr[11]                                ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sdram_addr[11]                         ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sdram_addr[11]~output                  ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; sdram_addr[12]                                ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sdram_addr[12]                         ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sdram_addr[12]~output                  ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; sdram_addr[1]                                 ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sdram_addr[1]                          ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sdram_addr[1]~output                   ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; sdram_addr[2]                                 ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sdram_addr[2]                          ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sdram_addr[2]~output                   ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; sdram_addr[3]                                 ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sdram_addr[3]                          ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sdram_addr[3]~output                   ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; sdram_addr[4]                                 ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sdram_addr[4]                          ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sdram_addr[4]~output                   ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; sdram_addr[5]                                 ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sdram_addr[5]                          ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sdram_addr[5]~output                   ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; sdram_addr[6]                                 ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sdram_addr[6]                          ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sdram_addr[6]~output                   ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; sdram_addr[7]                                 ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sdram_addr[7]                          ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sdram_addr[7]~output                   ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; sdram_addr[8]                                 ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sdram_addr[8]                          ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sdram_addr[8]~output                   ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; sdram_addr[9]                                 ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sdram_addr[9]                          ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sdram_addr[9]~output                   ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; sdram_ba[0]                                   ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sdram_ba[0]                            ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sdram_ba[0]~output                     ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; sdram_ba[1]                                   ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sdram_ba[1]                            ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sdram_ba[1]~output                     ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; sdram_cas_n                                   ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sdram_cas_n                            ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sdram_cas_n~output                     ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; sdram_cke                                     ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sdram_cke                              ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sdram_cke~output                       ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; sdram_clk                                     ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sdram_clk                              ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sdram_clk~output                       ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; sdram_cs_n                                    ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sdram_cs_n                             ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sdram_cs_n~output                      ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; sdram_dq[0]                                   ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sdram_dq[0]                            ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sdram_dq[0]~output                     ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                               ;           ;               ;          ;                                            ;
+; sdram_dq[10]                                  ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sdram_dq[10]                           ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sdram_dq[10]~output                    ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                               ;           ;               ;          ;                                            ;
+; sdram_dq[11]                                  ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sdram_dq[11]                           ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sdram_dq[11]~output                    ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                               ;           ;               ;          ;                                            ;
+; sdram_dq[12]                                  ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sdram_dq[12]                           ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sdram_dq[12]~output                    ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                               ;           ;               ;          ;                                            ;
+; sdram_dq[13]                                  ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sdram_dq[13]                           ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sdram_dq[13]~output                    ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                               ;           ;               ;          ;                                            ;
+; sdram_dq[14]                                  ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sdram_dq[14]                           ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sdram_dq[14]~output                    ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                               ;           ;               ;          ;                                            ;
+; sdram_dq[15]                                  ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sdram_dq[15]                           ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sdram_dq[15]~output                    ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                               ;           ;               ;          ;                                            ;
+; sdram_dq[1]                                   ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sdram_dq[1]                            ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sdram_dq[1]~output                     ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                               ;           ;               ;          ;                                            ;
+; sdram_dq[2]                                   ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sdram_dq[2]                            ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sdram_dq[2]~output                     ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                               ;           ;               ;          ;                                            ;
+; sdram_dq[3]                                   ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sdram_dq[3]                            ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sdram_dq[3]~output                     ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                               ;           ;               ;          ;                                            ;
+; sdram_dq[4]                                   ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sdram_dq[4]                            ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sdram_dq[4]~output                     ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                               ;           ;               ;          ;                                            ;
+; sdram_dq[5]                                   ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sdram_dq[5]                            ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sdram_dq[5]~output                     ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                               ;           ;               ;          ;                                            ;
+; sdram_dq[6]                                   ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sdram_dq[6]                            ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sdram_dq[6]~output                     ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                               ;           ;               ;          ;                                            ;
+; sdram_dq[7]                                   ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sdram_dq[7]                            ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sdram_dq[7]~output                     ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                               ;           ;               ;          ;                                            ;
+; sdram_dq[8]                                   ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sdram_dq[8]                            ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sdram_dq[8]~output                     ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                               ;           ;               ;          ;                                            ;
+; sdram_dq[9]                                   ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sdram_dq[9]                            ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sdram_dq[9]~output                     ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                               ;           ;               ;          ;                                            ;
+; sdram_dqm[0]                                  ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sdram_dqm[0]                           ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sdram_dqm[0]~output                    ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; sdram_dqm[1]                                  ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sdram_dqm[1]                           ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sdram_dqm[1]~output                    ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; sdram_ras_n                                   ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sdram_ras_n                            ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sdram_ras_n~output                     ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; sdram_we_n                                    ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sdram_we_n                             ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sdram_we_n~output                      ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; switch                                        ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- switch                                 ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- switch~input                           ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; vga_out_b[0]                                  ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- vga_out_b[0]                           ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- vga_out_b[0]~output                    ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; vga_out_b[1]                                  ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- vga_out_b[1]                           ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- vga_out_b[1]~output                    ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; vga_out_b[2]                                  ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- vga_out_b[2]                           ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- vga_out_b[2]~output                    ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; vga_out_b[3]                                  ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- vga_out_b[3]                           ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- vga_out_b[3]~output                    ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; vga_out_b[4]                                  ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- vga_out_b[4]                           ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- vga_out_b[4]~output                    ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; vga_out_g[0]                                  ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- vga_out_g[0]                           ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- vga_out_g[0]~output                    ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; vga_out_g[1]                                  ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- vga_out_g[1]                           ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- vga_out_g[1]~output                    ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; vga_out_g[2]                                  ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- vga_out_g[2]                           ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- vga_out_g[2]~output                    ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; vga_out_g[3]                                  ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- vga_out_g[3]                           ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- vga_out_g[3]~output                    ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; vga_out_g[4]                                  ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- vga_out_g[4]                           ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- vga_out_g[4]~output                    ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; vga_out_g[5]                                  ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- vga_out_g[5]                           ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- vga_out_g[5]~output                    ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; vga_out_hs                                    ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- vga_out_hs                             ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- vga_out_hs~output                      ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; vga_out_r[0]                                  ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- vga_out_r[0]                           ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- vga_out_r[0]~output                    ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; vga_out_r[1]                                  ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- vga_out_r[1]                           ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- vga_out_r[1]~output                    ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; vga_out_r[2]                                  ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- vga_out_r[2]                           ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- vga_out_r[2]~output                    ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; vga_out_r[3]                                  ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- vga_out_r[3]                           ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- vga_out_r[3]~output                    ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; vga_out_r[4]                                  ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- vga_out_r[4]                           ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- vga_out_r[4]~output                    ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
+; vga_out_vs                                    ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- vga_out_vs                             ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- vga_out_vs~output                      ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                               ;           ;               ;          ;                                            ;
++-----------------------------------------------+-----------+---------------+----------+--------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge Resource Usage Summary                                                                                                      ;
++---------------------------------------------+-----------------------------------------------------------------------------------------------+
+; Resource                                    ; Usage                                                                                         ;
++---------------------------------------------+-----------------------------------------------------------------------------------------------+
+; Estimated Total logic elements              ; 3,965                                                                                         ;
+;                                             ;                                                                                               ;
+; Total combinational functions               ; 2786                                                                                          ;
+; Logic element usage by number of LUT inputs ;                                                                                               ;
+;     -- 4 input functions                    ; 794                                                                                           ;
+;     -- 3 input functions                    ; 1299                                                                                          ;
+;     -- <=2 input functions                  ; 693                                                                                           ;
+;                                             ;                                                                                               ;
+; Logic elements by mode                      ;                                                                                               ;
+;     -- normal mode                          ; 1704                                                                                          ;
+;     -- arithmetic mode                      ; 1082                                                                                          ;
+;                                             ;                                                                                               ;
+; Total registers                             ; 2329                                                                                          ;
+;     -- Dedicated logic registers            ; 2329                                                                                          ;
+;     -- I/O registers                        ; 0                                                                                             ;
+;                                             ;                                                                                               ;
+; I/O pins                                    ; 106                                                                                           ;
+; Total memory bits                           ; 64968                                                                                         ;
+;                                             ;                                                                                               ;
+; Embedded Multiplier 9-bit elements          ; 0                                                                                             ;
+;                                             ;                                                                                               ;
+; Total PLLs                                  ; 2                                                                                             ;
+;     -- PLLs                                 ; 2                                                                                             ;
+;                                             ;                                                                                               ;
+; Maximum fan-out node                        ; sys_pll_2:sys_pll_m1|altpll:altpll_component|sys_pll_2_altpll:auto_generated|wire_pll1_clk[0] ;
+; Maximum fan-out                             ; 1450                                                                                          ;
+; Total fan-out                               ; 18399                                                                                         ;
+; Average fan-out                             ; 3.36                                                                                          ;
++---------------------------------------------+-----------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge RAM Summary                                                                                                                                                                                                                                                                                                               ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+--------------------------------------+
+; Name                                                                                                                                                                                                  ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                                  ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+--------------------------------------+
+; MedianSeletor:median_m0|linebuffer_Wapper:linebuffer_Wapper_m0|linebuffer:lb1|dp_bram:\mem_array_wr:1:linebufn|altsyncram:mem_array_rtl_0|altsyncram_s7l1:auto_generated|ALTSYNCRAM                   ; AUTO ; Simple Dual Port ; 640          ; 8            ; 640          ; 8            ; 5120 ; db/top.ram0_dp_bram_69f25fdc.hdl.mif ;
+; MedianSeletor:median_m0|linebuffer_Wapper:linebuffer_Wapper_m0|linebuffer:lb1|dp_bram:\mem_array_wr:2:linebufn|altsyncram:mem_array_rtl_0|altsyncram_s7l1:auto_generated|ALTSYNCRAM                   ; AUTO ; Simple Dual Port ; 640          ; 8            ; 640          ; 8            ; 5120 ; db/top.ram0_dp_bram_69f25fdc.hdl.mif ;
+; MedianSeletor:median_m0|linebuffer_Wapper:linebuffer_Wapper_m0|linebuffer:lb1|dp_bram:linebuf1|altsyncram:mem_array_rtl_0|altsyncram_s7l1:auto_generated|ALTSYNCRAM                                   ; AUTO ; Simple Dual Port ; 640          ; 8            ; 640          ; 8            ; 5120 ; db/top.ram0_dp_bram_69f25fdc.hdl.mif ;
+; MedianSeletor:median_m3|linebuffer_Wapper:linebuffer_Wapper_m0|linebuffer:lb1|dp_bram:\mem_array_wr:1:linebufn|altsyncram:mem_array_rtl_0|altsyncram_s7l1:auto_generated|ALTSYNCRAM                   ; AUTO ; Simple Dual Port ; 640          ; 8            ; 640          ; 8            ; 5120 ; db/top.ram0_dp_bram_69f25fdc.hdl.mif ;
+; MedianSeletor:median_m3|linebuffer_Wapper:linebuffer_Wapper_m0|linebuffer:lb1|dp_bram:\mem_array_wr:2:linebufn|altsyncram:mem_array_rtl_0|altsyncram_s7l1:auto_generated|ALTSYNCRAM                   ; AUTO ; Simple Dual Port ; 640          ; 8            ; 640          ; 8            ; 5120 ; db/top.ram0_dp_bram_69f25fdc.hdl.mif ;
+; MedianSeletor:median_m3|linebuffer_Wapper:linebuffer_Wapper_m0|linebuffer:lb1|dp_bram:linebuf1|altsyncram:mem_array_rtl_0|altsyncram_s7l1:auto_generated|ALTSYNCRAM                                   ; AUTO ; Simple Dual Port ; 640          ; 8            ; 640          ; 8            ; 5120 ; db/top.ram0_dp_bram_69f25fdc.hdl.mif ;
+; dilate:dilate_m0|linebuffer_Wapper:linebuffer_Wapper_m3|linebuffer:lb1|dp_bram:\mem_array_wr:1:linebufn|altsyncram:mem_array_rtl_0|altsyncram_8al1:auto_generated|ALTSYNCRAM                          ; AUTO ; Simple Dual Port ; 640          ; 1            ; 640          ; 1            ; 640  ; db/top.ram0_dp_bram_e2d6cfcf.hdl.mif ;
+; dilate:dilate_m0|linebuffer_Wapper:linebuffer_Wapper_m3|linebuffer:lb1|dp_bram:\mem_array_wr:2:linebufn|altsyncram:mem_array_rtl_0|altsyncram_8al1:auto_generated|ALTSYNCRAM                          ; AUTO ; Simple Dual Port ; 640          ; 1            ; 640          ; 1            ; 640  ; db/top.ram0_dp_bram_e2d6cfcf.hdl.mif ;
+; dilate:dilate_m0|linebuffer_Wapper:linebuffer_Wapper_m3|linebuffer:lb1|dp_bram:linebuf1|altsyncram:mem_array_rtl_0|altsyncram_8al1:auto_generated|ALTSYNCRAM                                          ; AUTO ; Simple Dual Port ; 640          ; 1            ; 640          ; 1            ; 640  ; db/top.ram0_dp_bram_e2d6cfcf.hdl.mif ;
+; frame_read_write:frame_read_write_m0|afifo_16_512:read_buf|dcfifo:dcfifo_component|dcfifo_7ql1:auto_generated|altsyncram_ov61:fifo_ram|ALTSYNCRAM                                                     ; AUTO ; Simple Dual Port ; 512          ; 16           ; 512          ; 16           ; 8192 ; None                                 ;
+; frame_read_write:frame_read_write_m0|afifo_16_512:write_buf|dcfifo:dcfifo_component|dcfifo_7ql1:auto_generated|altsyncram_ov61:fifo_ram|ALTSYNCRAM                                                    ; AUTO ; Simple Dual Port ; 512          ; 16           ; 512          ; 16           ; 8192 ; None                                 ;
+; rgb_to_ycbcr:rgb_to_ycbcr_m0|altshift_taps:i_h_sync_delay_1_rtl_0|shift_taps_hkm:auto_generated|altsyncram_b2b1:altsyncram2|ALTSYNCRAM                                                                ; AUTO ; Simple Dual Port ; 36           ; 2            ; 36           ; 2            ; 72   ; None                                 ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_u124:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 128          ; 4            ; 128          ; 4            ; 512  ; None                                 ;
+; sobel:sobel_m0|linebuffer_Wapper:linebuffer_Wapper_m1|linebuffer:lb1|dp_bram:\mem_array_wr:1:linebufn|altsyncram:mem_array_rtl_0|altsyncram_s7l1:auto_generated|ALTSYNCRAM                            ; AUTO ; Simple Dual Port ; 640          ; 8            ; 640          ; 8            ; 5120 ; db/top.ram0_dp_bram_69f25fdc.hdl.mif ;
+; sobel:sobel_m0|linebuffer_Wapper:linebuffer_Wapper_m1|linebuffer:lb1|dp_bram:\mem_array_wr:2:linebufn|altsyncram:mem_array_rtl_0|altsyncram_s7l1:auto_generated|ALTSYNCRAM                            ; AUTO ; Simple Dual Port ; 640          ; 8            ; 640          ; 8            ; 5120 ; db/top.ram0_dp_bram_69f25fdc.hdl.mif ;
+; sobel:sobel_m0|linebuffer_Wapper:linebuffer_Wapper_m1|linebuffer:lb1|dp_bram:linebuf1|altsyncram:mem_array_rtl_0|altsyncram_s7l1:auto_generated|ALTSYNCRAM                                            ; AUTO ; Simple Dual Port ; 640          ; 8            ; 640          ; 8            ; 5120 ; db/top.ram0_dp_bram_69f25fdc.hdl.mif ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+--------------------------------------+
+
+
++--------------------------+
+; Partition Merge Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Partition Merge
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Wed Oct 14 21:07:50 2020
+Info: Command: quartus_cdb --read_settings_files=off --write_settings_files=off sdram_ov5640_vga_sobel -c top --merge=on
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (35007): Using synthesis netlist for partition "Top"
+Info (35007): Using synthesis netlist for partition "sld_hub:auto_hub"
+Info (35007): Using synthesis netlist for partition "sld_signaltap:auto_signaltap_0"
+Info (35024): Successfully connected in-system debug instance "auto_signaltap_0" to all 41 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
+Info (35002): Resolved and merged 3 partition(s)
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 2 node(s), including 0 DDIO, 2 PLL, 0 transceiver and 0 LCELL
+Critical Warning (138067): Current license file does not support incremental compilation. The Quartus Prime software removes all the user-specified design partitions in the design automatically.
+Warning (21074): Design contains 25 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "cmos_db_1[0]" File: D:/EEEEE/Backup/all_back/AX301/20_sdram_ov5640_vga_sobel/src/top.v Line: 12
+    Warning (15610): No output dependent on input pin "cmos_db_1[1]" File: D:/EEEEE/Backup/all_back/AX301/20_sdram_ov5640_vga_sobel/src/top.v Line: 12
+    Warning (15610): No output dependent on input pin "cmos_rst_n_1" File: D:/EEEEE/Backup/all_back/AX301/20_sdram_ov5640_vga_sobel/src/top.v Line: 13
+    Warning (15610): No output dependent on input pin "cmos_vsync_2" File: D:/EEEEE/Backup/all_back/AX301/20_sdram_ov5640_vga_sobel/src/top.v Line: 18
+    Warning (15610): No output dependent on input pin "cmos_href_2" File: D:/EEEEE/Backup/all_back/AX301/20_sdram_ov5640_vga_sobel/src/top.v Line: 19
+    Warning (15610): No output dependent on input pin "cmos_db_2[0]" File: D:/EEEEE/Backup/all_back/AX301/20_sdram_ov5640_vga_sobel/src/top.v Line: 22
+    Warning (15610): No output dependent on input pin "cmos_db_2[1]" File: D:/EEEEE/Backup/all_back/AX301/20_sdram_ov5640_vga_sobel/src/top.v Line: 22
+    Warning (15610): No output dependent on input pin "cmos_db_2[2]" File: D:/EEEEE/Backup/all_back/AX301/20_sdram_ov5640_vga_sobel/src/top.v Line: 22
+    Warning (15610): No output dependent on input pin "cmos_db_2[3]" File: D:/EEEEE/Backup/all_back/AX301/20_sdram_ov5640_vga_sobel/src/top.v Line: 22
+    Warning (15610): No output dependent on input pin "cmos_db_2[4]" File: D:/EEEEE/Backup/all_back/AX301/20_sdram_ov5640_vga_sobel/src/top.v Line: 22
+    Warning (15610): No output dependent on input pin "cmos_db_2[5]" File: D:/EEEEE/Backup/all_back/AX301/20_sdram_ov5640_vga_sobel/src/top.v Line: 22
+    Warning (15610): No output dependent on input pin "cmos_db_2[6]" File: D:/EEEEE/Backup/all_back/AX301/20_sdram_ov5640_vga_sobel/src/top.v Line: 22
+    Warning (15610): No output dependent on input pin "cmos_db_2[7]" File: D:/EEEEE/Backup/all_back/AX301/20_sdram_ov5640_vga_sobel/src/top.v Line: 22
+    Warning (15610): No output dependent on input pin "cmos_rst_n_2" File: D:/EEEEE/Backup/all_back/AX301/20_sdram_ov5640_vga_sobel/src/top.v Line: 23
+    Warning (15610): No output dependent on input pin "cmos_vsync_3" File: D:/EEEEE/Backup/all_back/AX301/20_sdram_ov5640_vga_sobel/src/top.v Line: 28
+    Warning (15610): No output dependent on input pin "cmos_href_3" File: D:/EEEEE/Backup/all_back/AX301/20_sdram_ov5640_vga_sobel/src/top.v Line: 29
+    Warning (15610): No output dependent on input pin "cmos_db_3[0]" File: D:/EEEEE/Backup/all_back/AX301/20_sdram_ov5640_vga_sobel/src/top.v Line: 32
+    Warning (15610): No output dependent on input pin "cmos_db_3[1]" File: D:/EEEEE/Backup/all_back/AX301/20_sdram_ov5640_vga_sobel/src/top.v Line: 32
+    Warning (15610): No output dependent on input pin "cmos_db_3[2]" File: D:/EEEEE/Backup/all_back/AX301/20_sdram_ov5640_vga_sobel/src/top.v Line: 32
+    Warning (15610): No output dependent on input pin "cmos_db_3[3]" File: D:/EEEEE/Backup/all_back/AX301/20_sdram_ov5640_vga_sobel/src/top.v Line: 32
+    Warning (15610): No output dependent on input pin "cmos_db_3[4]" File: D:/EEEEE/Backup/all_back/AX301/20_sdram_ov5640_vga_sobel/src/top.v Line: 32
+    Warning (15610): No output dependent on input pin "cmos_db_3[5]" File: D:/EEEEE/Backup/all_back/AX301/20_sdram_ov5640_vga_sobel/src/top.v Line: 32
+    Warning (15610): No output dependent on input pin "cmos_db_3[6]" File: D:/EEEEE/Backup/all_back/AX301/20_sdram_ov5640_vga_sobel/src/top.v Line: 32
+    Warning (15610): No output dependent on input pin "cmos_db_3[7]" File: D:/EEEEE/Backup/all_back/AX301/20_sdram_ov5640_vga_sobel/src/top.v Line: 32
+    Warning (15610): No output dependent on input pin "cmos_rst_n_3" File: D:/EEEEE/Backup/all_back/AX301/20_sdram_ov5640_vga_sobel/src/top.v Line: 33
+Info (21057): Implemented 4258 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 40 input pins
+    Info (21059): Implemented 48 output pins
+    Info (21060): Implemented 22 bidirectional pins
+    Info (21061): Implemented 4032 logic cells
+    Info (21064): Implemented 113 RAM segments
+    Info (21065): Implemented 2 PLLs
+Info: Quartus Prime Partition Merge was successful. 0 errors, 28 warnings
+    Info: Peak virtual memory: 4707 megabytes
+    Info: Processing ended: Wed Oct 14 21:07:54 2020
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03
+
+

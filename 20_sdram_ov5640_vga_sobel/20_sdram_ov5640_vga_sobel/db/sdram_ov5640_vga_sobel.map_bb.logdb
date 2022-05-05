@@ -1,0 +1,5 @@
+v1
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,mark:mark_scale|lpm_mult:Mult0|mult_aft:auto_generated|mac_out2,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,mark:mark_scale|lpm_mult:Mult0|mult_aft:auto_generated|mac_out4,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,mark_2:mark_rightside|lpm_mult:Mult0|mult_dft:auto_generated|mac_out4,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,mark_2:mark_rightside|lpm_mult:Mult0|mult_dft:auto_generated|mac_out2,
