@@ -6,5 +6,6 @@ sdram,ov5640,vga,sobel,uart,etc..
 4G芯片CAT1，由它发送给云端
 
 ## 文件说明
-* 老版代码：[20_sdram_ov5640_vga_sobel]()
-* mypart：实现2byte to 480byte的转换，rgb565到base64的转换，uart通信模块，形成json串 [mypart]()
+* 老版代码：[v1.0]()
+* 新版代码：[v2.0]()
+* mypart：实现2byte to 480byte的转换，rgb565到base64的转换，uart通信模块，形成json串 [transform_uart_iot]()
