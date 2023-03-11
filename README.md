@@ -8,4 +8,3 @@ sdram,ov5640,vga,sobel,uart,etc..
 ## 文件说明
 * 老版代码：[v1.0](https://github.com/xianmie/Internet-project/tree/main/v1.0)
 * 新版代码：[v2.0](https://github.com/xianmie/Internet-project/tree/main/v2.0)
-* mypart：实现2byte to 480byte的转换，rgb565到base64的转换，uart通信模块，形成json串 [transform_uart_iot](https://github.com/xianmie/Internet-project/tree/main/transform_uart_iot)
